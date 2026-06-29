@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Канистра.рф — презентация логотипа</title>
+  <meta name="description" content="Страница-презентация вариантов логотипа и промтов для проекта Канистра.рф.">
+  <style>
+    :root {
+      --bg: #10151d;
+      --panel: #17202b;
+      --panel-2: #1d2936;
+      --text: #f4f7fb;
+      --muted: #aab6c5;
+      --accent: #ffc247;
+      --accent-2: #45d09f;
+      --border: rgba(255, 255, 255, 0.1);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(255, 194, 71, 0.18), transparent 32rem),
+        radial-gradient(circle at 85% 10%, rgba(69, 208, 159, 0.16), transparent 30rem),
+        linear-gradient(135deg, #0d1117 0%, var(--bg) 52%, #0d1117 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+      min-height: 520px;
+    }
+
+    .hero__content,
+    .hero__visual,
+    .card,
+    .note {
+      border: 1px solid var(--border);
+      background: rgba(23, 32, 43, 0.82);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+      border-radius: 28px;
+    }
+
+    .hero__content {
+      padding: clamp(28px, 5vw, 56px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 194, 71, 0.12);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 92px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--accent);
+      color: #17120a;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--text);
+    }
+
+    .hero__visual {
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .hero__visual img {
+      display: block;
+      width: 100%;
+      border-radius: 20px;
+      background: var(--panel-2);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-end;
+      margin: 54px 0 20px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 46px);
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      max-width: 420px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      overflow: hidden;
+    }
+
+    .card__image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--panel-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card__body {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 18px;
+    }
+
+    .card__title {
+      margin: 0;
+      font-weight: 800;
+    }
+
+    .card__link {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 20px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .note strong {
+      color: var(--text);
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        width: min(100% - 20px, 1180px);
+        padding-top: 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-head p {
+        margin-top: 10px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="eyebrow">GitHub Pages · test-for-mybag</p>
+        <h1 id="hero-title">Канистра.рф</h1>
+        <p class="lead">Страница для быстрой презентации референсов, промтов и итоговых вариантов логотипа в стиле плашки-канистры.</p>
+        <div class="actions">
+          <a class="btn" href="#gallery">Смотреть варианты</a>
+          <a class="btn btn--ghost" href="Канистра - Hero.html">Открыть исходный HTML</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <img src="ChatGPT Image 29 июн. 2026 г., 10_48_20.png" alt="Итоговый вариант логотипа Канистра.рф">
+      </div>
+    </section>
+
+    <section id="gallery" aria-labelledby="gallery-title">
+      <div class="section-head">
+        <h2 id="gallery-title">Материалы</h2>
+        <p>Скриншоты промтов и изображения из репозитория. Клик по карточке открывает файл в полном размере.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <a href="1.png"><img class="card__image" src="1.png" alt="Скриншот промта 1"></a>
+          <div class="card__body"><p class="card__title">Промт 1</p><a class="card__link" href="1.png">Открыть</a></div>
+        </article>
+        <article class="card">
+          <a href="2.png"><img class="card__image" src="2.png" alt="Скриншот промта 2"></a>
+          <div class="card__body"><p class="card__title">Промт 2</p><a class="card__link" href="2.png">Открыть</a></div>
+        </article>
+        <article class="card">
+          <a href="3.png"><img class="card__image" src="3.png" alt="Скриншот промта 3"></a>
+          <div class="card__body"><p class="card__title">Промт 3</p><a class="card__link" href="3.png">Открыть</a></div>
+        </article>
+        <article class="card">
+          <a href="4.png"><img class="card__image" src="4.png" alt="Скриншот промта 4"></a>
+          <div class="card__body"><p class="card__title">Промт 4</p><a class="card__link" href="4.png">Открыть</a></div>
+        </article>
+        <article class="card">
+          <a href="5.png"><img class="card__image" src="5.png" alt="Скриншот промта 5"></a>
+          <div class="card__body"><p class="card__title">Промт 5</p><a class="card__link" href="5.png">Открыть</a></div>
+        </article>
+        <article class="card">
+          <a href="ChatGPT Image 29 июн. 2026 г., 10_36_45.png"><img class="card__image" src="ChatGPT Image 29 июн. 2026 г., 10_36_45.png" alt="Референс изображения"></a>
+          <div class="card__body"><p class="card__title">Референс</p><a class="card__link" href="ChatGPT Image 29 июн. 2026 г., 10_36_45.png">Открыть</a></div>
+        </article>
+        <article class="card">
+          <a href="ChatGPT Image 29 июн. 2026 г., 10_48_20.png"><img class="card__image" src="ChatGPT Image 29 июн. 2026 г., 10_48_20.png" alt="Логотип, сделанный в GPT"></a>
+          <div class="card__body"><p class="card__title">Логотип GPT</p><a class="card__link" href="ChatGPT Image 29 июн. 2026 г., 10_48_20.png">Открыть</a></div>
+        </article>
+      </div>
+
+      <div class="note">
+        <strong>Важно:</strong> для GitHub Pages главным файлом в корне репозитория должен быть <code>index.html</code>. Эта страница уже подготовлена как входная точка сайта.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
